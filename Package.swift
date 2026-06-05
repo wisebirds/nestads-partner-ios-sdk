@@ -12,14 +12,14 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(url: "https://github.com/wisebirds/nestads-ios-sdk", from: "2.12.0"),
+    .package(url: "https://github.com/wisebirds/nestads-ios-sdk", from: "2.13.8"),
     .package(url: "https://github.com/covigroup/COVI-iOS-SDK.git", from: "1.2.1")
   ],
   targets: [
     .binaryTarget(
       name: "NestAdsPartnerSDK",
-      url: "https://github.com/wisebirds/nestads-partner-ios-sdk/releases/download/1.0.0/NestAdsPartnerSDK.xcframework.zip",
-      checksum: "886d83525e766ee30088a6703ddba9d9cd1a55b0ac7c5ea15d0e2caf4b895419"
+      url: "https://github.com/wisebirds/nestads-partner-ios-sdk/releases/download/1.0.1/NestAdsPartnerSDK.xcframework.zip",
+      checksum: "e669a0b915c5904d74e2204b985ba21f55ebc95a4f5acb330bf55a295d3fdcdd"
     ),
     .target(
       name: "NestAdsPartnerSDKWrapper",
