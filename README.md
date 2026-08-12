@@ -6,8 +6,8 @@
 
 | 구성요소 | 버전 |
 |---|---|
-| NestAdsPartnerSDK | `1.1.1` |
-| NestAdsSDK (번들) | `2.15.0` 이상 |
+| NestAdsPartnerSDK | `1.1.2` |
+| NestAdsSDK (번들) | `2.15.3` 이상 |
 | COVI 환경 | host 앱 `NestAds.environment` 기준 (미설정 시 채널 기본값 `prod`) |
 
 ## 설치 (Swift Package Manager)
@@ -24,7 +24,7 @@ https://github.com/wisebirds/nestads-partner-ios-sdk
 dependencies: [
     .package(
         url: "https://github.com/wisebirds/nestads-partner-ios-sdk",
-        from: "1.1.1"
+        from: "1.1.2"
     )
 ]
 ```
