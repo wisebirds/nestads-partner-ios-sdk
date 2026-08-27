@@ -6,8 +6,7 @@
 
 | 구성요소 | 버전 |
 |---|---|
-| NestAdsPartnerSDK | `1.1.2` |
-| NestAdsSDK (번들) | `2.15.3` 이상 |
+| NestAdsPartnerSDK | `1.2.0` |
 | COVI 환경 | host 앱 `NestAds.environment` 기준 (미설정 시 채널 기본값 `prod`) |
 
 ## 설치 (Swift Package Manager)
@@ -24,14 +23,21 @@ https://github.com/wisebirds/nestads-partner-ios-sdk
 dependencies: [
     .package(
         url: "https://github.com/wisebirds/nestads-partner-ios-sdk",
-        from: "1.1.2"
+        from: "1.2.0"
     )
 ]
 ```
 
+### 메인 NestAdsSDK 추가 (필수)
+
+파트너 SDK 1.2.0 부터 메인 NestAdsSDK 와 **런타임 브리지 방식**으로 연동됩니다(컴파일 의존 없음).
+파트너 SDK 를 추가해도 메인 SDK 가 전이 의존으로 따라오지 않으므로 **메인 NestAdsSDK(2.16.0 이상)를
+직접 추가**해야 합니다. 메인 SDK 가 없거나 브리지 미지원 버전이면 파트너 광고는 조용히 비활성되며
+콘솔에 경고가 출력됩니다.
+
 ## 요구 사항
 
-- iOS 13.0+
+- iOS 15.0+ (AdFit SDK 요구)
 - Swift 5.9+
 - Xcode 15.0+
 
@@ -39,8 +45,12 @@ dependencies: [
 
 | Framework | Source |
 |---|---|
-| NestAdsSDK | GitHub `wisebirds/nestads-ios-sdk` |
 | COVI-iOS-SDK | GitHub `covigroup/COVI-iOS-SDK` |
+| MolocoSDK | GitHub `moloco/moloco-sdk-ios-spm` |
+| AdFitSDK | GitHub `adfit/adfit-spm` |
+
+> **개인정보 라벨 안내**: AdFit SDK 는 IDFA 를 자체 수집합니다. 파트너 광고(AdFit)를 사용하는
+> 앱은 App Store 개인정보 처리방침 라벨(App Privacy)에 광고 식별자 수집을 반영해야 합니다.
 
 ## 문의 및 지원
 
